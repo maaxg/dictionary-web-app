@@ -4,11 +4,93 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/css/index.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/switch.css" />
+    <link rel="stylesheet" href="/css/select.css" />
+    <link rel="stylesheet" href="/css/search-bar.css" />
+    <link rel="stylesheet" href="/css/home.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dictionary App</title>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/main.ts"></script>
+    <header>
+      <nav class="header-container">
+        <div class="header-left">
+          <a>
+            <img alt="Logo" src="./public/images/logo.svg" />
+          </a>
+        </div>
+        <div class="header-right">
+          <label for="select-serif"></label>
+          <select class="select" id="select-serif" name="serifs">
+            <option value="1">Sans Serif</option>
+            <option value="2">Serif</option>
+            <option value="3">Mono</option>
+          </select>
+          <div class="header-divider"></div>
+          <div class="theme-container">
+            <label class="switch">
+              <input id="toggle-switch" type="checkbox" />
+              <span class="slider round"></span>
+            </label>
+            <img alt="theme-indicator" src="./public/images/icon-moon.svg" />
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="search-bar-container">
+        <input
+          name="search-input"
+          id="search-input"
+          placeholder="Type a word..."
+        />
+        <button id="search-button">
+          <img alt="Search" src="/public/images/icon-search.svg" />
+        </button>
+      </div>
+      <section class="word-section">
+        <div class="left">
+          <h1 id="word">Keyboard</h1>
+          <p id="pronounce" class="body-m" style="color: var(--purple)">
+            /ˈkiːbɔːd/
+          </p>
+        </div>
+        <button class="right">
+          <img
+            class="play-button"
+            alt="Play"
+            src="/public/images/icon-play.svg"
+          />
+        </button>
+      </section>
+      <section class="word-definition-section">
+        <div class="word-type-container">
+          <h2 class="body-m" id="word-type" style="font-weight: bold">noun</h2>
+          <div class="word-definition-divider"></div>
+        </div>
+        <ul>
+          <p class="body-m" style="color: var(--grey)">Meaning</p>
+          <li class="body-m">
+            A panel of keys that operate a computer or typewriter.
+            <p class="body-m example" style="color: var(--grey)">
+              “Keyboarding is the part of this job I hate the most.”
+            </p>
+          </li>
+        </ul>
+        <div class="synonyms-container">
+          <p class="body-m" style="color: var(--grey)">Synonyms</p>
+          <p class="body-m" style="color: var(--purple); font-weight: bold">
+            eletronic keyboard
+          </p>
+        </div>
+      </section>
+      <div class="word-definition-divider"></div>
+      <section class="source-section">
+        <p class="body-s" style="color: var(--grey)">Source</p>
+        <a class="body-s">https://en.wiktionary.org/wiki/keyboard</a>
+      </section>
+    </main>
+    <script type="module" src="./ts/index.ts"></script>
   </body>
 </html>

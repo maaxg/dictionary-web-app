@@ -1,0 +1,99 @@
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  row-gap: 24px;
+}
+
+/* Word section */
+
+.word-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.word-section .left {
+  display: inherit;
+  flex-direction: column;
+  row-gap: 8px;
+}
+
+.play-button {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  opacity: 0.5;
+  transition: ease-in-out 0.2s;
+}
+
+.play-button:hover {
+  opacity: 1;
+  transition: ease-in-out 0.2s;
+}
+
+/* Word section */
+
+/* Word definition */
+
+.word-definition-section {
+  display: flex;
+  flex-direction: column;
+  row-gap: 24px;
+}
+
+.word-definition-divider {
+  height: 1px;
+  width: 100%;
+  background-color: var(--light-grey);
+}
+
+.word-type-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 16px;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  margin-top: 16px;
+}
+
+ul li::before {
+  content: "\2022";
+  color: var(--purple);
+  font-weight: bold;
+  width: 1em;
+  margin-right: 8px;
+}
+
+.example {
+  margin-top: 16px;
+}
+
+.synonyms-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  column-gap: 24px;
+}
+
+/* Word definition */
+
+@media (min-width: 768px) {
+  main {
+    padding: 0 40px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    padding: 0 350px;
+  }
+}
