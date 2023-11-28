@@ -39,7 +39,7 @@
       </nav>
     </header>
     <main>
-      <div class="search-bar-container">
+      <div id="search-bar-container" class="search-bar-container">
         <input
           name="search-input"
           id="search-input"
@@ -49,12 +49,22 @@
           <img alt="Search" src="/public/images/icon-search.svg" />
         </button>
       </div>
-      <section class="word-section">
+      <p id="error-message" class="body-m error-text"></p>
+
+      <section id="not-found-message" class="not-found-definition-section">
+        <h1>😕</h1>
+        <h3>No definitions found</h3>
+        <p class="body-m" style="color: var(--grey)">
+          Sorry pal, we couldn't find definitions for the word you were looking
+          for. You can try the search again at later time or head to the web
+          instead.
+        </p>
+      </section>
+
+      <section id="word-section" class="word-section">
         <div class="left">
-          <h1 id="word">Keyboard</h1>
-          <p id="pronounce" class="body-m" style="color: var(--purple)">
-            /ˈkiːbɔːd/
-          </p>
+          <h1 id="word"></h1>
+          <p id="pronounce" class="body-m pronounce-text"></p>
         </div>
         <button class="right">
           <img
@@ -92,5 +102,7 @@
       </section>
     </main>
     <script type="module" src="./ts/index.ts"></script>
+    <script defer type="module" src="./ts/hydrate-word-information.ts"></script>
+    <script defer type="module" src="./ts/search.ts"></script>
   </body>
 </html>

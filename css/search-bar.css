@@ -9,6 +9,14 @@
   min-height: 48px;
 }
 
+.error {
+  border: 1px solid var(--red);
+}
+
+.error-text {
+  color: var(--red);
+}
+
 #search-input {
   -webkit-appearance: none;
   appearance: none;
