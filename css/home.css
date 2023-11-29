@@ -73,15 +73,22 @@ ul li::before {
   margin-right: 8px;
 }
 
+ul li::before .no-marker {
+  list-style-type: none;
+  content: "";
+  color: red;
+}
+
 .example {
   margin-top: 16px;
 }
 
 .synonyms-container {
   display: flex;
-  flex-direction: row;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   column-gap: 24px;
+  list-style: none;
 }
 
 /* Word definition */
